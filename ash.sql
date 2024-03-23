@@ -1,1 +1,2 @@
-select * from `strange-ratio-411606.test.wikimovie`
+SELECT *
+FROM `strange-ratio-411606.test.wikimovie`
