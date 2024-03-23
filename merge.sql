@@ -1,2 +1,2 @@
-insert (name, phone) INTO   `strange-ratio-411606.tetra.tera-nova` 
-("juice",908789000)
+INSERT INTO `strange-ratio-411606.tetra.tera-nova` 
+(name, phone) VALUES ("juice",908789000)
