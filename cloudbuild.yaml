@@ -1,9 +1,9 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'us-central1-docker.pkg.dev/ash11123/gcf-artifacts/bucket_clean:latest', '.' ]
+    args: [ 'build', '-t', 'us-central1-docker.pkg.dev/ash11123/gcf-artifacts/bucket_clean:prod', '.' ]
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'push', 'us-central1-docker.pkg.dev/ash11123/gcf-artifacts/bucket_clean:latest' ]
+    args: [ 'push', 'us-central1-docker.pkg.dev/ash11123/gcf-artifacts/bucket_clean:prod' ]
 
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
@@ -11,7 +11,7 @@ steps:
       - 'deploy'
       - 'test'  # Replace with your service name
       - '--image'
-      - 'us-central1-docker.pkg.dev/ash11123/gcf-artifacts/bucket_clean:latest'
+      - 'us-central1-docker.pkg.dev/ash11123/gcf-artifacts/bucket_clean:prod'
       - '--region'
       - 'us-central1'  # You can change this if you want to deploy to a different region
       - '--platform'
