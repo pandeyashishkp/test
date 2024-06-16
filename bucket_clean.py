@@ -1,6 +1,9 @@
 from google.cloud import storage
 import pathlib
-import sys
+from flask import Flask
+
+
+app = Flask(__name__)
 
 class ReadConfigFile:
     def __init__(self):
@@ -23,3 +26,5 @@ class GCSBucketDeletion:
 
 if __name__ == '__main__':
     gcs = GCSBucketDeletion(project='ash11123', gcspath='ash11123')
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
