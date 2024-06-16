@@ -26,5 +26,5 @@ class GCSBucketDeletion:
 
 if __name__ == '__main__':
     gcs = GCSBucketDeletion(project='ash11123', gcspath='ash11123')
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', 8080))
     app.run(debug=True, host='0.0.0.0', port=port)
