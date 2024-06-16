@@ -1,7 +1,6 @@
 from google.cloud import storage
 import pathlib
 
-app = Flask(__name__)
 
 class ReadConfigFile:
     def __init__(self):
