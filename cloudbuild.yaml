@@ -2,9 +2,6 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build', '-t', 'us-central1-docker.pkg.dev/ash11123/gcf-artifacts/bucket_clean:prod', '.' ]
 
-  - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'push', 'us-central1-docker.pkg.dev/ash11123/gcf-artifacts/bucket_clean:prod' ]
-
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'run'
