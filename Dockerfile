@@ -1,7 +1,8 @@
-FROM python:3.11-slim
+FROM python:3.11
 ENV PYTHONBUFFERED 1
 ENV APP_HOME /app 
 WORKDIR $APP_HOME
-COPY . ./
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-CMD ['python', 'bucket_clean.py']
+COPY . ./
+CMD ["python", "bucket_clean.py"]
