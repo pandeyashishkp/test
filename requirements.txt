@@ -5,6 +5,7 @@ google-auth
 google-cloud
 google-cloud-bigquery
 google-cloud-bigquery-datatransfer
+google-cloud-storage
 google-cloud-core
 google-cloud-resource-manager
 google-cloud-secret-manager
